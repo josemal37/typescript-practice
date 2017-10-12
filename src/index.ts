@@ -1,4 +1,4 @@
-import { Cuenta, CuentaCorriente, CajaDeAhorro, Direccion } from "./bank/model/bank";
+import { Cuenta, CuentaCorriente, CajaDeAhorro, Direccion, Cliente } from "./bank/model/bank";
 
 console.log("TYPESCRIPT PRACTICE");
 console.log("BANCO ABC");
@@ -27,3 +27,17 @@ console.log("DIRECCIÓN");
 console.log("Pais", direccion.pais);
 console.log("Ciudad", direccion.ciudad);
 console.log("Calle", direccion.calle);
+
+//Prueba de cliente
+let cliente = new Cliente(1, "Jose", direccion);
+console.log("CLIENTE");
+console.log("Código",cliente.codigo);
+console.log("Nombre",cliente.nombre);
+console.log("Dirección",cliente.direccion);
+console.log("Cuentas",cliente.cuentas);
+console.log("Añadiendo cuenta corriente");
+cliente.addCuenta(cuentaCorriente);
+console.log("Cuentas",cliente.cuentas);
+console.log("Añadiendo caja de ahorro");
+cliente.addCuenta(cajaDeAhorro);
+console.log("Cuentas",cliente.cuentas);
