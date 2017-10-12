@@ -1,4 +1,4 @@
-import { Cuenta, CuentaCorriente, CajaDeAhorro } from "./bank/model/bank";
+import { Cuenta, CuentaCorriente, CajaDeAhorro, Direccion } from "./bank/model/bank";
 
 console.log("TYPESCRIPT PRACTICE");
 console.log("BANCO ABC");
@@ -6,7 +6,7 @@ console.log("BANCO ABC");
 //Prueba de cuenta corriente
 let cuentaCorriente = new CuentaCorriente(1, 0, "BOB");
 console.log("CUENTA CORRIENTE");
-console.log("Numero de cuenta", cuentaCorriente.numero);
+console.log("Número de cuenta", cuentaCorriente.numero);
 console.log("Saldo", cuentaCorriente.saldo);
 console.log("Moneda", cuentaCorriente.moneda);
 
@@ -20,3 +20,10 @@ console.log("Interes", cajaDeAhorro.interes);
 //Aplicando interes
 console.log("Aplicando interes");
 cajaDeAhorro.aplicarInteres();
+
+//Prueba de dirección
+let direccion = new Direccion("Bolivia", "Cochabamba", "Reza");
+console.log("DIRECCIÓN");
+console.log("Pais", direccion.pais);
+console.log("Ciudad", direccion.ciudad);
+console.log("Calle", direccion.calle);
